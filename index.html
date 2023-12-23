@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> 
+    *{
+
+        margin: 0;
+        padding: 0%;
+        box-sizing: border-box;
+        
+
+    }
+
+    body{
+        width: 100%;
+        height:100% ;
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(40);
+        align-items: center;
+       
+    }
+
+    .calculator{
+        border: 7px solid rgb(138, 3, 138);
+        padding: 20px;
+        border-radius: 16px;
+        background: transparent;
+        box-shadow: 0cqmax;
+        
+        background-color:rgb(225, 173, 225);
+    }
+
+    input{
+        width: 320px;
+        border: none;
+        padding: 24px;
+        margin:10px;
+        background: rgb(201, 71, 134);
+        box-shadow: 0cqh;
+        font-size: 40px;
+        text-align: right;
+        cursor: pointer;
+    }
+
+    input::placeholder{
+        color: rgb(194, 207, 219);
+        font-size:20px;
+    }
+
+    button{
+        border:none;
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+        border-radius: 70px;
+        background: transparent;
+        background-color: rgb(105, 105, 186);
+        font-size: 20px;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <div class="body">  
+        <div class="calculator">    
+    <h1> CALCULATOR </h1>
+    <input type="text" id="in" placeholder=" Calculate your values here "
+    readonly="">
+
+    
+
+    <div>      
+        <button onclick="del()"> Del </button>
+        <button onclick="can()"> AC </button>
+        <button onclick="AT_add('%')"> % </button>
+        <button onclick="AT_add('+')"> + </button>
+
+
+</div>
+
+<div>  
+<button onclick="AT_add(9)"> 9 </button>
+<button onclick="AT_add(8)"> 8 </button> 
+<button onclick="AT_add(7)"> 7 </button>
+<button onclick="AT_add('/')"> /</button>
+</div>
+
+<div> 
+<button onclick="AT_add(6)"> 6 </button> 
+<button onclick="AT_add(5)"> 5 </button>
+<button onclick="AT_add(4)"> 4</button>
+<button onclick="AT_add('-')"> - </button> 
+</div>
+
+<div>  
+
+    <button onclick="AT_add(3)"> 3 </button>
+     <button onclick="AT_add(2)"> 2 </button>  
+<button onclick="AT_add(1)"> 1 </button>
+<button onclick="AT_add('*')"> * </button>
+</div>
+
+<div> 
+ <button onclick="AT_add(0)"> 0 </button>
+ <button onclick="sin()"> Sin </button>
+ <button onclick="cos()"> Cos </button>
+ <button onclick="equal()" > = </button>
+</div>
+
+</d>
+
+<script> 
+
+var val = document.getElementById("in");
+
+function AT_add(v){
+    val.value = val.value + v;
+}
+
+function can(){
+    val.value="";
+}
+
+function equal(){
+    val.value=eval(val.value);
+}
+function del(){
+    val.value = val.value.substr(0,val.value.length-1);
+}
+
+function sin(){
+    val.value=Math.sin(-1);
+}
+
+function cos(){
+    val.value=Math.cos();
+}
+
+console.log(Math.sin(3.14/2));
+console.log(Math.sqrt(81));
+console.log(Math.pow(4,12));
+
+
+
+</script>
+
+</body>
+</html>
